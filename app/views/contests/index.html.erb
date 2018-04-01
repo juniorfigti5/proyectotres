@@ -1,0 +1,48 @@
+<% if user_signed_in?%>
+
+
+
+<div class="jumbotron">
+  <h1 class="display-4">Hola, <%= current_user.email %>!</h1><br>
+  <div style= "margin-left: 5em; margin-right: 30em">
+  <p class="lead">Encuentra las mejores voces para tus anuncios publicitarios (videos en YouTube, comerciales en TV y radio, etc.), crea y gestiona tus propios concursos que se ajusten a lo que estás buscando.</p></div>
+  <hr class="my-4">
+  <p class="lead">
+    <a class="btn btn-primary btn-lg text-light" href="/contests/new" role="button" >Crear un nuevo concurso</a>
+  </p>
+</div>
+<% end %>
+
+
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm">
+     <em><h1 style="text-align: center;">Concursos</h1></em>
+
+     <% @contests.sort_by(&:created_at).reverse.each do |contest| %>
+
+
+ 
+       <div class="card" style="width: fill;">
+          <div><%= image_tag(contest.banner , width: '200 px') %></div>
+          <div class="card-body">
+            <h5 class="card-title"><td><%= contest.name %></td></h5>
+            <p class="card-text"><%= contest.script %></p>
+            <%= link_to 'Ir al concurso', 'contests/'+contest.url, :class => "btn btn-primary btn-sm btn-block text-light" %><p></p>
+            <% if user_signed_in? %>
+              <%= link_to 'Editar', 'contests/'+contest.url+'/edit', :class => "btn btn-primary btn-sm btn-block text-light" %><p></p>
+              <%= link_to 'Eliminar', 'contests/'+contest.url, method: :delete, data: { confirm: '¿Está seguro?' }, :class => "btn btn-primary btn-sm btn-block text-light" %><p></p>
+            <% end %>
+          </div>
+       </div><p></p>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
+
+

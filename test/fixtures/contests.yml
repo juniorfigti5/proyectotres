@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  banner: 
+  url: MyString
+  startDate: 
+  endDate: 2018-02-13
+  value: 9.99
+  script: MyText
+  recomendations: MyText
+
+two:
+  name: MyString
+  banner: 
+  url: MyString
+  startDate: 
+  endDate: 2018-02-13
+  value: 9.99
+  script: MyText
+  recomendations: MyText

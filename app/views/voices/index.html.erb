@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Voices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Contest</th>
+      <th>Email</th>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Upload date</th>
+      <th>Status</th>
+      <th>Original file</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+
+  <tbody>
+    <% @voices.sort_by(&:created_at).reverse.each do |voice| %>
+      <tr>
+        <td><%= voice.contest.name %></td>
+        <td><%= voice.email %></td>
+        <td><%= voice.name %></td>
+        <td><%= voice.surname %></td>
+        <td><%= voice.upload_date %></td>
+        <td><%= voice.status.name %></td>
+        <td><%= voice.original_file %></td>
+        <td><%= link_to 'Show', voice %></td>
+        <td><%= link_to 'Edit', edit_voice_path(voice) %></td>
+        <td><%= link_to 'Destroy', voice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Voice', new_voice_path %>

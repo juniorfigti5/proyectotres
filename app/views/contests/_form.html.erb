@@ -1,0 +1,77 @@
+<%= form_for @contest, html: { multipart: true } do |f| %>
+  <% if contest.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(contest.errors.count, "error") %> prohibited this contest from being saved:</h2>
+
+      <ul>
+      <% contest.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<form>
+  <div class="form-group row">  
+    <label for="inputEmail3" class="col-sm-2 col-form-label">Nombre*</label>
+    <div class="col-sm-10">
+      <%= f.text_field(:name, {:class => 'form-control'}) %>
+    </div>
+  </div>
+
+  <div class="form-group row">  
+   <label for="inputEmail3" class="col-sm-2 col-form-label"><em>Banner* </em><br></label>
+    <div class="col-sm-10">
+      <%= f.file_field :banner %>
+    </div>
+  </div>
+
+  <div class="form-group row">  
+    <label for="inputEmail3" class="col-sm-2 col-form-label"><em>URL*</em><br></label>
+    <div class="col-sm-10">
+      <%= f.text_field(:url, {:class => 'form-control'}) %>
+    </div>
+  </div>
+
+  <div class="form-group row">  
+   <label for="inputEmail3" class="col-sm-2 col-form-label"><em>Inicio*</em></label>
+    <div class="col-sm-10">
+     <%= f.date_select :startDate %>
+    </div>
+  </div>
+
+  <div class="form-group row">  
+   <label for="inputEmail3" class="col-sm-2 col-form-label"><em>Fin*</em></label>
+    <div class="col-sm-10">
+     <%= f.date_select :endDate %>
+    </div>
+  </div>
+
+  <div class="form-group row">  
+   <label for="inputEmail3" class="col-sm-2 col-form-label"><em>Remuneración($)*</em></label>
+    <div class="col-sm-10">
+     <%= f.text_field(:value, {:class => 'form-control'}) %>
+    </div>
+  </div>
+
+  <div class="form-group row">  
+   <label for="inputEmail3" class="col-sm-2 col-form-label"><em>Guión/Texto*</em></label>
+    <div class="col-sm-10">
+     <%= f.text_area(:script, {:class => 'form-control'}) %>
+    </div>
+  </div>
+
+  <div class="form-group row">  
+   <label for="inputEmail3" class="col-sm-2 col-form-label"><em>Recomendación*</em></label>
+    <div class="col-sm-10">
+     <%= f.text_area(:recomendations, {:class => 'form-control'}) %>
+    </div>
+  </div>
+
+  <div class="actions">
+    <%= f.submit("Guardar concurso", {:class => 'btn btn-success btn-lg btn-block'}) %>
+  </div>
+<% end %>
+
+</div>
+</form>

@@ -1,0 +1,36 @@
+<body class="gray">
+  <div class="con">
+   <div class="center">
+     <div class="container-fluid">
+       <br>
+       <h2>Inicia sesión</h2>
+
+       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+         <div class="field">
+           <% f.label :email %><br />
+           <%= f.email_field(:email, {:class => 'form-control', :placeholder => 'Correo electrónico'}) %>
+          </div><br>
+  
+         <div class="field">
+           <% f.label :password %>
+           <%= f.password_field(:password, {:class => 'form-control', :placeholder => 'Contraseña'}) %>
+         </div><br>
+
+         <% if devise_mapping.rememberable? -%>
+           <div class="field">
+             <%= f.check_box :remember_me %> Recordar
+             <% f.label :remember_me %>
+           </div><br>
+         <% end -%>
+
+
+         <div class="actions">
+           <%= f.submit("Iniciar sesión", {:class => 'btn btn-success btn-lg btn-block'}) %>
+         </div>
+         <%= render "devise/shared/links" %>
+       <% end %>
+     </div>
+   </div>
+  </div>
+</body>
+

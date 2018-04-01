@@ -1,0 +1,13 @@
+<p></p>
+<body class="gray">
+   <div class="center2">
+       <div class="container-fluid"><br>
+         <h1>Editar concurso</h1>
+
+          <%= render 'form', contest: @contest %>
+
+          <%= link_to 'Mostrar', contests_path+'/'+@contest.url %> |
+          <%= link_to 'Atrás', contests_path %>
+       </div>
+    </div>
+</body>

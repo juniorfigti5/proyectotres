@@ -1,0 +1,94 @@
+
+
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <div class="row">
+    <div class="col">
+     <div class="sticky-top">
+       
+       <%= image_tag(@contest.banner.url, width: '200 px') do %> 
+       <% end %><br>
+       <p>
+         <h5 class="card-title">Nombre:</h5>
+         <h6 class="card-subtitle mb-2 text-muted"><%= @contest.name %></h6>
+       </p>
+ 
+       <p>
+         <h5 class="card-title">Administrador:</h5>
+         <h6 class="card-subtitle mb-2 text-muted"><%= @contest.user.email %></h6>
+       </p>
+ 
+       <p>
+         <h5 class="card-title">Url:</h5>
+         <h6 class="card-subtitle mb-2 text-muted"><%= @contest.url %></h6>
+       </p>
+ 
+       <p>
+         <h5 class="card-title">Fecha de inicio:</h5>
+         <h6 class="card-subtitle mb-2 text-muted"><%= @contest.startDate %></h6>
+       </p>
+ 
+       <p>
+         <h5 class="card-title">Fecha de finalización:</h5>
+         <h6 class="card-subtitle mb-2 text-muted"><%= @contest.endDate %></h6>
+       </p>
+ 
+       <p>
+         <h5 class="card-title">Remuneración:</h5>
+         <h6 class="card-subtitle mb-2 text-muted">$<%= @contest.value %></h6>
+       </p>
+ 
+       <p>
+         <h5 class="card-title">Guión / Texto:</h5>
+         <h6 class="card-subtitle mb-2 text-muted"><%= @contest.script %></h6>
+       </p>
+ 
+       <p>
+         <h5 class="card-title">Recomendaciones:</h5>
+         <h6 class="card-subtitle mb-2 text-muted"><%= @contest.recomendations %></h6>
+       </p>
+
+
+
+        <%= link_to 'Participa en el concurso', {:controller => "voices", :action => "new", :contest_id => @contest.id}, :class => "btn btn-primary btn-lg" %>
+     </div>
+   </div>
+
+
+    <div class="col-sm">
+     <p class="lead">
+       <%= link_to 'Participa en el concurso', {:controller => "voices", :action => "new", :contest_id => @contest.id}, :class => "btn btn-primary btn-lg btn-block" %>  
+     </p>
+
+     <em><h1 class="h1">Voces participantes</h1></em>
+
+          <% @voices.sort_by(&:created_at).reverse.each do |voice| %>
+   <div class="card" style="width: fill;">
+     <div class="card-body">
+       <h5 class="card-title">Nombre: <%= voice.name %></h5>
+       <h6 class="card-subtitle mb-2 text-muted">Email: <%= voice.email %></h6>
+              <% if voice.surname == "procesado" %>
+       <h6 class="card-subtitle mb-2 text-muted">Estado: <%= voice.surname %></h6>
+              <% else %>
+       <h6 class="card-subtitle mb-2 text-muted">Estado: En proceso...</h6>        
+              <% end %>
+       <p class="card-text">
+              <% if voice.surname == "procesado" %>
+              <a href=<%= voice.original_file%> download>Audio</a>
+              <%=audio_tag(voice.original_file, autoplay: false, controls: true)%>
+              <% end %>
+       </p>
+              <% if user_signed_in? %>
+                <%= link_to 'Show', voice %>
+                <%= link_to 'Edit', edit_voice_path(voice) %>
+                <%= link_to 'Destroy', voice, method: :delete, data: { confirm: '¿Estás seguro?' } %>
+               <% else %>
+              <% end %>
+      </div>
+    </div> <br>
+
+              <% end %>
+    </div>
+  </div>
+</div>

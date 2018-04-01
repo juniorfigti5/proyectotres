@@ -1,0 +1,677 @@
+=> Booting Puma
+=> Rails 5.0.6 application starting in development on http://localhost:3000
+=> Run `rails server -h` for more startup options
+Puma starting in single mode...
+* Version 3.11.2 (ruby 2.4.2-p198), codename: Love Song
+* Min threads: 5, max threads: 5
+* Environment: development
+* Listening on tcp://0.0.0.0:3000
+Use Ctrl-C to stop
+Started GET "/" for 200.124.125.185 at 2018-03-20 16:20:41 +0000
+Cannot render console from 200.124.125.185! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (212.1ms)
+Completed 200 OK in 283ms (Views: 273.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/contests" for 200.124.125.185 at 2018-03-20 16:20:45 +0000
+Cannot render console from 200.124.125.185! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ContestsController#index as HTML
+  Rendering contests/index.html.erb within layouts/application
+  [1m[36mContest Load (1.5ms)[0m  [1m[34mSELECT "contests".* FROM "contests"[0m
+  Rendered contests/index.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 46ms (Views: 30.2ms | ActiveRecord: 7.1ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/constests/6/original/karen_appetite.png"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.6) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.6) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/constests/5/original/karen_appetite.png"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.6) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.6) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/constests/9/original/pc_user_icon_by_ornorm-d4winao.png"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.6) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.6) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/constests/2/original/tv-futurama-1999_-philip_j_fry-billy_west-tops-s07e03-fry_red_jacket.jpg"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.6) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.6) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/constests/1/original/tv-futurama-1999_-philip_j_fry-billy_west-tops-s07e03-fry_red_jacket.jpg"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.6) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.6) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/users/sign_in" for 200.124.125.185 at 2018-03-20 16:20:47 +0000
+Cannot render console from 200.124.125.185! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.1ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (26.1ms)
+Completed 200 OK in 63ms (Views: 44.5ms | ActiveRecord: 6.8ms)
+
+
+Started POST "/users/sign_in" for 200.124.125.185 at 2018-03-20 16:20:56 +0000
+Cannot render console from 200.124.125.185! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JE1aciOASE90zOsvcY1yy3O7oO3oUrKXnkPCLFB7wEBlHNXK/8+yMEyV/rinJTAt2ik30O0Dc51NM6ivvaFcyg==", "user"=>{"email"=>"prueba2@sustentacion.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Iniciar sesión"}
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "prueba2@sustentacion.com"], ["LIMIT", 1]]
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.9ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", "2018-03-20 16:20:57.070877"], ["last_sign_in_at", "2018-03-15 19:26:59.309529"], ["sign_in_count", 3], ["updated_at", "2018-03-20 16:20:57.073568"], ["id", 5]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://18.222.154.64:3000/
+Completed 302 Found in 167ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/" for 200.124.125.185 at 2018-03-20 16:20:57 +0000
+Cannot render console from 200.124.125.185! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/contests" for 200.124.125.185 at 2018-03-20 16:20:59 +0000
+Cannot render console from 200.124.125.185! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ContestsController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering contests/index.html.erb within layouts/application
+  [1m[36mContest Load (1.5ms)[0m  [1m[34mSELECT "contests".* FROM "contests" WHERE "contests"."user_id" = 5 ORDER BY "contests"."created_at" DESC[0m
+  Rendered contests/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 21ms (Views: 15.8ms | ActiveRecord: 3.0ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/constests/9/original/pc_user_icon_by_ornorm-d4winao.png"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.6) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.6) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/contests/testiando" for 200.124.125.185 at 2018-03-20 16:21:02 +0000
+Cannot render console from 200.124.125.185! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ContestsController#show as HTML
+  Parameters: {"url"=>"testiando"}
+  [1m[36mContest Load (1.1ms)[0m  [1m[34mSELECT  "contests".* FROM "contests" WHERE "contests"."url" = $1 LIMIT $2[0m  [["url", "testiando"], ["LIMIT", 1]]
+Run options: --seed 64866
+
+# Running:
+
+E
+
+Error:
+StatusesControllerTest#test_should_get_index:
+ActiveRecord::Fixture::FixtureError: table "contests" has no column named "banner".
+    
+
+/usr/local/rvm/gems/ruby-2.4.2/gems/railties-5.0.6/lib/rails/test_unit/reporter.rb:70:in `method': undefined method `test_should_get_index' for class `Minitest::Result' (NameError)
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/railties-5.0.6/lib/rails/test_unit/reporter.rb:70:in `format_rerun_snippet'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/railties-5.0.6/lib/rails/test_unit/reporter.rb:23:in `record'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:803:in `block in record'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:802:in `each'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:802:in `record'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:334:in `run_one_method'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:321:in `block (2 levels) in run'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:320:in `each'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:320:in `block in run'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:360:in `on_signal'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:347:in `with_info_handler'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:319:in `run'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/railties-5.0.6/lib/rails/test_unit/line_filtering.rb:9:in `run'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:159:in `block in __run'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:159:in `map'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:159:in `__run'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:136:in `run'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:63:in `block in autorun'
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "contests".* FROM "contests" WHERE "contests"."url" = $1 LIMIT $2[0m  [["url", "testiando"], ["LIMIT", 1]]
+  Rendering contests/show.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVoice Load (2.0ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."contest_id" = 9 LIMIT $1 OFFSET $2[0m  [["LIMIT", 50], ["OFFSET", 0]]
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered contests/show.html.erb within layouts/application (39.8ms)
+Completed 200 OK in 2096ms (Views: 46.4ms | ActiveRecord: 10.9ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/constests/9/original/pc_user_icon_by_ornorm-d4winao.png"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.6) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.6) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/voices/63/original/Spacecraft_Hatch_Opening-SoundBible.com-1577619787.mp3"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.6) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.6) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/voices/62/original/Fish_Splashing-SoundBible.com-250179430.wav"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.6) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.6) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/voices/new?contest_id=9" for 200.124.125.185 at 2018-03-20 16:21:06 +0000
+Cannot render console from 200.124.125.185! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VoicesController#new as HTML
+  Parameters: {"contest_id"=>"9"}
+  [1m[36mContest Load (1.3ms)[0m  [1m[34mSELECT  "contests".* FROM "contests" WHERE "contests"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+  Rendering voices/new.html.erb within layouts/application
+  Rendered voices/_form.html.erb (3.6ms)
+  Rendered voices/new.html.erb within layouts/application (5.4ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 28ms (Views: 20.7ms | ActiveRecord: 2.7ms)
+
+
+Started POST "/voices" for 200.124.125.185 at 2018-03-20 16:21:15 +0000
+Cannot render console from 200.124.125.185! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by VoicesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"OkxTKaYiAQTwD9+UD1lAonw9ALQcIAXv9KCPm4hL5dRqSFmopXHxdomZwSD2kMK7YcqLahg8jZ15/JuWjoqAcA==", "voice"=>{"contest_id"=>"9", "email"=>"a@a", "name"=>"a", "surname"=>"a", "original_file"=>#<ActionDispatch::Http::UploadedFile:0x00007f2354a73950 @tempfile=#<Tempfile:/tmp/RackMultipart20180320-3158-d8row0.mp3>, @original_filename="Spacecraft Hatch Opening-SoundBible.com-1577619787.mp3", @content_type="audio/mp3", @headers="Content-Disposition: form-data; name=\"voice[original_file]\"; filename=\"Spacecraft Hatch Opening-SoundBible.com-1577619787.mp3\"\r\nContent-Type: audio/mp3\r\n">}, "commit"=>"Participar"}
+[paperclip] Trying to link /tmp/RackMultipart20180320-3158-d8row0.mp3 to /tmp/32030c1a0faea691b1ea95597575101820180320-3158-4z2xus.mp3
+[paperclip] Trying to link /tmp/32030c1a0faea691b1ea95597575101820180320-3158-4z2xus.mp3 to /tmp/39d4617f1d48174056809a87ac52480520180320-3158-1l8q2c.mp3
+Command :: file -b --mime '/tmp/39d4617f1d48174056809a87ac52480520180320-3158-1l8q2c.mp3'
+  [1m[35m (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mContest Load (1.5ms)[0m  [1m[34mSELECT  "contests".* FROM "contests" WHERE "contests"."id" = $1 LIMIT $2[0m  [["id", 9], ["LIMIT", 1]]
+[paperclip] Trying to link /tmp/32030c1a0faea691b1ea95597575101820180320-3158-4z2xus.mp3 to /tmp/39d4617f1d48174056809a87ac52480520180320-3158-q4isn9.mp3
+Command :: file -b --mime '/tmp/39d4617f1d48174056809a87ac52480520180320-3158-q4isn9.mp3'
+  [1m[35mSQL (1.6ms)[0m  [1m[32mINSERT INTO "voices" ("contest_id", "email", "name", "surname", "upload_date", "status_id", "original_file_file_name", "original_file_content_type", "original_file_file_size", "original_file_updated_at", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["contest_id", 9], ["email", "a@a"], ["name", "a"], ["surname", "a"], ["upload_date", "2018-03-20"], ["status_id", 1], ["original_file_file_name", "Spacecraft_Hatch_Opening-SoundBible.com-1577619787.mp3"], ["original_file_content_type", "audio/mpeg"], ["original_file_file_size", 144884], ["original_file_updated_at", "2018-03-20 16:21:15.901682"], ["created_at", "2018-03-20 16:21:15.944778"], ["updated_at", "2018-03-20 16:21:15.944778"]]
+  [1m[35m (1.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering con_mailer/confirmation.html.erb within layouts/mailer
+  Rendered con_mailer/confirmation.html.erb within layouts/mailer (0.3ms)
+  Rendering con_mailer/confirmation.text.erb within layouts/mailer
+  Rendered con_mailer/confirmation.text.erb within layouts/mailer (0.2ms)
+ConMailer#confirmation: processed outbound mail in 184.9ms
+Sent mail to a@a (450.3ms)
+Date: Tue, 20 Mar 2018 16:21:16 +0000
+From: psupervoices@gmail.com
+To: a@a
+Message-ID: <5ab134fc55da9_c562a6c5b455873@ip-172-31-19-42.mail>
+Subject: VOZ CARGADA
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_5ab134fc54480_c562a6c5b4557c0";
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+
+----==_mimepart_5ab134fc54480_c562a6c5b4557c0
+Content-Type: text/plain;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<h1> voz convertida </h1>
+
+
+
+----==_mimepart_5ab134fc54480_c562a6c5b4557c0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <h1> voz cargada </h1>
+
+  </body>
+</html>
+
+----==_mimepart_5ab134fc54480_c562a6c5b4557c0--
+
+Redirected to http://18.222.154.64:3000/contests/testiando
+Completed 302 Found in 898ms (ActiveRecord: 8.6ms)
+
+
+Started GET "/contests/testiando" for 200.124.125.185 at 2018-03-20 16:21:16 +0000
+Cannot render console from 200.124.125.185! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ContestsController#show as HTML
+  Parameters: {"url"=>"testiando"}
+  [1m[36mContest Load (1.3ms)[0m  [1m[34mSELECT  "contests".* FROM "contests" WHERE "contests"."url" = $1 LIMIT $2[0m  [["url", "testiando"], ["LIMIT", 1]]
+Run options: --seed 6324
+
+# Running:
+
+E
+
+Error:
+ContestsControllerTest#test_should_get_index:
+ActiveRecord::Fixture::FixtureError: table "contests" has no column named "banner".
+    
+
+/usr/local/rvm/gems/ruby-2.4.2/gems/railties-5.0.6/lib/rails/test_unit/reporter.rb:70:in `method': undefined method `test_should_get_index' for class `Minitest::Result' (NameError)
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/railties-5.0.6/lib/rails/test_unit/reporter.rb:70:in `format_rerun_snippet'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/railties-5.0.6/lib/rails/test_unit/reporter.rb:23:in `record'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:803:in `block in record'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:802:in `each'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:802:in `record'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:334:in `run_one_method'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:321:in `block (2 levels) in run'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:320:in `each'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:320:in `block in run'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:360:in `on_signal'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:347:in `with_info_handler'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:319:in `run'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/railties-5.0.6/lib/rails/test_unit/line_filtering.rb:9:in `run'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:159:in `block in __run'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:159:in `map'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:159:in `__run'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:136:in `run'
+	from /usr/local/rvm/gems/ruby-2.4.2/gems/minitest-5.11.3/lib/minitest.rb:63:in `block in autorun'
+  [1m[36mCACHE (0.0ms)[0m  [1m[34mSELECT  "contests".* FROM "contests" WHERE "contests"."url" = $1 LIMIT $2[0m  [["url", "testiando"], ["LIMIT", 1]]
+  Rendering contests/show.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mVoice Load (1.3ms)[0m  [1m[34mSELECT  "voices".* FROM "voices" WHERE "voices"."contest_id" = 9 LIMIT $1 OFFSET $2[0m  [["LIMIT", 50], ["OFFSET", 0]]
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendered contests/show.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 1972ms (Views: 22.1ms | ActiveRecord: 8.4ms)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/constests/9/original/pc_user_icon_by_ornorm-d4winao.png"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.6) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.6) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/voices/63/original/Spacecraft_Hatch_Opening-SoundBible.com-1577619787.mp3"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.6) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.6) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+  
+ActionController::RoutingError (No route matches [GET] "/assets/voices/62/original/Fish_Splashing-SoundBible.com-250179430.wav"):
+  
+actionpack (5.0.6) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.1) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.1) lib/web_console/middleware.rb:20:in `block in call'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.1) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.6) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.6) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.6) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `block in call'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.6) lib/active_support/logger.rb:63:in `block (3 levels) in broadcast'
+activesupport (5.0.6) lib/active_support/logger_silence.rb:20:in `silence'
+activesupport (5.0.6) lib/active_support/logger.rb:61:in `block (2 levels) in broadcast'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:11:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.4) lib/rack/method_override.rb:22:in `call'
+rack (2.0.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.6) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.6) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.4) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.6) lib/rails/engine.rb:522:in `call'
+puma (3.11.2) lib/puma/configuration.rb:225:in `call'
+puma (3.11.2) lib/puma/server.rb:624:in `handle_request'
+puma (3.11.2) lib/puma/server.rb:438:in `process_client'
+puma (3.11.2) lib/puma/server.rb:302:in `block in run'
+puma (3.11.2) lib/puma/thread_pool.rb:120:in `block in spawn_thread'
+Started GET "/" for 200.124.125.185 at 2018-03-20 16:21:22 +0000
+Cannot render console from 200.124.125.185! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 200.124.125.185 at 2018-03-20 16:35:33 +0000
+Cannot render console from 200.124.125.185! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.5ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 18ms (Views: 16.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for 200.124.125.185 at 2018-03-20 16:55:27 +0000
+Cannot render console from 200.124.125.185! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.7ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for 200.124.125.185 at 2018-03-20 16:55:28 +0000
+Cannot render console from 200.124.125.185! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by HomeController#index as HTML
+  Rendering home/index.html.erb within layouts/application
+  Rendered home/index.html.erb within layouts/application (1.4ms)
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 1.4ms)
+
+

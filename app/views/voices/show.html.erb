@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Contest:</strong>
+  <%= @voice.contest.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @voice.email %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @voice.name %>
+</p>
+
+<p>
+  <strong>Surname:</strong>
+  <%= @voice.surname %>
+</p>
+
+<p>
+  <strong>Upload date:</strong>
+  <%= @voice.upload_date %>
+</p>
+
+<p>
+  <strong>Original file:</strong>
+  <%= @voice.original_file %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @voice.status %>
+</p>
+
+<%= link_to 'Edit', edit_voice_path(@voice) %> |
+<%= link_to 'Back', voices_path %>

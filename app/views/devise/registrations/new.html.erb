@@ -1,0 +1,36 @@
+<body class="gray">
+  <div class="con">
+   <div class="center">
+     <div class="container-fluid">
+       <br>
+       <h2>Regístrate</h2>o <%= render "devise/shared/links" %> 
+       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+       <%= devise_error_messages! %>
+        <div>
+         <%f.label :nombre %><br />
+         <%= f.text_field(:nombre, {:class => 'form-control', :placeholder => 'Nombre'}) %>
+       </div>
+       <div>
+         <% f.label :apellido %><br />
+          <%= f.text_field(:apellido, {:class => 'form-control', :placeholder => 'Apellido'}) %>
+       </div>
+       <div class="field">
+         <% f.label :email %><br />
+         <%= f.email_field(:email, {:class => 'form-control', :placeholder => 'email'}) %>
+       </div>
+       <div class="field">
+         <br />
+         <%= f.password_field(:password, {:class => 'form-control', :placeholder => 'Contraseña (6 Caracteres mínimo)'}) %>
+       </div>
+       <div class="field">
+         <% f.label :password_confirmation %>
+         <br/>
+         <%= f.password_field(:password_confirmation, {:class => 'form-control', :placeholder => 'Confirme contraseña'}) %> <br/>
+       <div class="actions">
+         <%= f.submit("Crear cuenta", {:class => 'btn btn-success btn-lg btn-block'}) %>
+       </div><br/>
+       <% end %>
+     </div>
+   </div>
+ </div>
+</body>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Proyecto1</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css' %>
+  </head>
+
+ <body>
+
+ <nav class="navbar navbar-expand-lg navbar navbar-dark bg-dark">
+   <a class="navbar-brand" href="/"><%= image_tag("logos/logo2.png", width: '105px')%></a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+   </button>
+   <div class="collapse navbar-collapse" id="navbarNav">
+
+   </div>
+
+   <div>
+    <%= link_to "Concursos", "/contests", :class => 'btn outline-secondary text-white' %>
+   <% if user_signed_in? %>
+  <%= link_to 'Editar perfil', edit_user_registration_path, :class => 'btn outline-secondary text-white' %>
+  <%= link_to "Cerrar sesión", destroy_user_session_path, method: :delete, :class =>'btn btn-outline-secondary text-white'   %>
+   <% else %>
+  <%= link_to "Inicia sesión", new_user_session_path, :class => 'btn outline-secondary text-white'  %>
+  <%= link_to "Regístrate", new_user_registration_path, :class => 'btn btn-outline-secondary text-white'  %>
+   <% end %>
+  </p>
+  <% if notice %>
+   <p class="alert alert-success"><%= notice %></p>
+  <% end %>
+  <% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+</div>
+ </nav>
+ <%= yield %>
+ </body>
+</html>
