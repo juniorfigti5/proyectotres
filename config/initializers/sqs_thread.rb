@@ -1,7 +1,7 @@
 Thread.new do
     puts 'Inicia llamado queue para procesamiento de voces'
     Aws.use_bundled_cert!
-    sqs = Aws::SQS::Client.new(region: 'us-east-2', credentials: Aws::Credentials.new())
+    sqs = Aws::SQS::Client.new(region: 'us-east-2', credentials: Aws::Credentials.new('AKIAJCDJUJGG2BUOXEYA', 'c15WikqRR8ZgSXqU7HIL9ZtgnEreepo0PsML2QBl'))
     receive_message_result = sqs.receive_message({
                             queue_url: 'https://sqs.us-east-2.amazonaws.com/800983206590/SQSVocesCloud', 
                             message_attribute_names: ["All"], # Receive all custom attributes.
