@@ -1,8 +1,8 @@
 class Contest < ApplicationRecord
 	belongs_to :user
 	has_attached_file :banner, :style => { :small => "150x150>", :large => '300x400' },
-                  :url  => "/assets/constests/:id/:style/:basename.:extension",
-				  :path => ":rails_root/public/assets/constests/:id/:style/:basename.:extension", 
+				  :url  => "http://vocesclouds3.s3.amazonaws.com/",
+				  :path => "/public/assets/constests/:id/:style/:basename.:extension", 
 				  validate_media_type: false
 
 	

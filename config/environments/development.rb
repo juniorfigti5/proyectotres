@@ -37,15 +37,24 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
 
 
-config.action_mailer.smtp_settings = {
-  :address => "email-smtp.us-east-1.amazonaws.com",
-  :port => 587,
-  :user_name => ENV["SES_SMTP_USERNAME"] = "AKIAI3FMQ7D7PXJQY3DQ", #Your SMTP user
-  :password => ENV["SES_SMTP_PASSWORD"] = "AoPaTZ+WBVpHfZcWTNgAp1cZr59S0/ydnnsy2nXoLQ3t", #Your SMTP password
-  :authentication => :login,
-  :enable_starttls_auto => true
-}
+  config.action_mailer.smtp_settings = {
+    :address => "email-smtp.us-east-1.amazonaws.com",
+    :port => 587,
+    :user_name => ENV["SES_SMTP_USERNAME"] = "#", #Your SMTP user
+    :password => ENV["SES_SMTP_PASSWORD"] = "#", #Your SMTP password
+    :authentication => :login,
+    :enable_starttls_auto => true
+  }
 
+  config.paperclip_defaults = {
+    storage: :s3,
+    s3_credentials: {
+      bucket: 'vocesclouds3',
+      access_key_id: '#',
+      secret_access_key: '#',
+      s3_region: 'us-east-2',
+    }
+  }
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

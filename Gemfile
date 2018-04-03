@@ -69,7 +69,7 @@ gem "letter_opener", :group => :development
 gem 'rufus-scheduler'
 
 # AWS
-gem 'aws-sdk', '~> 2'
+gem 'aws-sdk', '~> 2.3'
 gem 'aws-sdk-resources', '~> 2.5'
 gem 'aws-sdk-rails', '~> 1.0'
 gem 'aws-record', '~> 1.0'

@@ -237,7 +237,7 @@ PLATFORMS
 
 DEPENDENCIES
   aws-record (~> 1.0)
-  aws-sdk (~> 2)
+  aws-sdk (~> 2.3)
   aws-sdk-rails (~> 1.0)
   aws-sdk-resources (~> 2.5)
   bcrypt

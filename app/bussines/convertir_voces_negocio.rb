@@ -14,7 +14,8 @@ class ConvertirVocesNegocio
             url_origen = "#{raiz}#{id_voz}/original/#{nombre_voz}"
             url_destino = "#{raiz}#{id_voz}/convertido/#{nombre_voz_destino}.mp3"
             if !Dir.exist?("#{raiz}#{id_voz}/convertido/") then
-                mkdir = 'md "' + "#{raiz}#{id_voz}/convertido/" + '"'
+                mkdir = 'mkdir "' + "#{raiz}#{id_voz}/convertido/" + '"'
+                puts mkdir
                 system(mkdir)
             end
             puts "#{url_origen}"

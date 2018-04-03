@@ -35,7 +35,7 @@ class VoicesController < ApplicationController
       if @voice.save
         logger.debug @voice.id
         Aws.use_bundled_cert!
-        sqs = Aws::SQS::Client.new(region: 'us-east-2', credentials: Aws::Credentials.new('AKIAJCDJUJGG2BUOXEYA', 'c15WikqRR8ZgSXqU7HIL9ZtgnEreepo0PsML2QBl'))
+        sqs = Aws::SQS::Client.new(region: 'us-east-2', credentials: Aws::Credentials.new())
         resp = sqs.send_message({queue_url: "https://sqs.us-east-2.amazonaws.com/800983206590/SQSVocesCloud",
                                   message_body: @voice.to_json,
                                   delay_seconds: 1

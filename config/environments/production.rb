@@ -51,7 +51,24 @@ Rails.application.configure do
 
   # Use a different cache store in production.
   # config.cache_store = :mem_cache_store
+  config.action_mailer.smtp_settings = {
+    :address => "email-smtp.us-east-1.amazonaws.com",
+    :port => 587,
+    :user_name => ENV["SES_SMTP_USERNAME"] = "#", #Your SMTP user
+    :password => ENV["SES_SMTP_PASSWORD"] = "#", #Your SMTP password
+    :authentication => :login,
+    :enable_starttls_auto => true
+  }
 
+  config.paperclip_defaults = {
+    storage: :s3,
+    s3_credentials: {
+      bucket: 'vocesclouds3',
+      access_key_id: '#',
+      secret_access_key: '#',
+      s3_region: 'us-east-2',
+    }
+  }
   # Use a real queuing backend for Active Job (and separate queues per environment)
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "proyecto1_#{Rails.env}"

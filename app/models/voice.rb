@@ -3,8 +3,8 @@ class Voice < ApplicationRecord
 	belongs_to :status, optional: true
 #	after_create :send_mail 
 	has_attached_file :original_file,
-                  :url  => "/assets/voices/:id/:style/:basename.:extension",
-                  :path => ":rails_root/public/assets/voices/:id/:style/:basename.:extension", 
+                  :url  => "http://vocesclouds3.s3.amazonaws.com/",
+                  :path => "/public/assets/voices/:id/:style/:basename.:extension", 
 				  validate_media_type: false
 
     validates_attachment_presence :original_file
