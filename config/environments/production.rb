@@ -64,8 +64,8 @@ Rails.application.configure do
     storage: :s3,
     s3_credentials: {
       bucket: 'vocesclouds3',
-      access_key_id: '#',
-      secret_access_key: '#',
+      access_key_id: '',
+      secret_access_key: '',
       s3_region: 'us-east-2',
     }
   }

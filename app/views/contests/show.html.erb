@@ -68,13 +68,11 @@
      <div class="card-body">
        <h5 class="card-title">Nombre: <%= voice.name %></h5>
        <h6 class="card-subtitle mb-2 text-muted">Email: <%= voice.email %></h6>
-              <% if voice.surname == "procesado" %>
-       <h6 class="card-subtitle mb-2 text-muted">Estado: <%= voice.surname %></h6>
-              <% else %>
-       <h6 class="card-subtitle mb-2 text-muted">Estado: En proceso...</h6>        
-              <% end %>
+
+       <h6 class="card-subtitle mb-2 text-muted">Estado: <%= voice.status.name %></h6>
+
        <p class="card-text">
-              <% if voice.surname == "procesado" %>
+              <% if voice.status_id == 2 %>
               <a href=<%= voice.original_file%> download>Audio</a>
               <%=audio_tag(voice.original_file, autoplay: false, controls: true)%>
               <% end %>
