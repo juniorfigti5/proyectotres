@@ -7,8 +7,9 @@
     <div class="col">
      <div class="sticky-top">
        
-       <%= image_tag(@contest.banner.url, width: '200 px') do %> 
-       <% end %><br>
+       <%= image_tag(@banner, width: '200 px') do %> 
+       <% end %>
+       <br>
        <p>
          <h5 class="card-title">Nombre:</h5>
          <h6 class="card-subtitle mb-2 text-muted"><%= @contest.name %></h6>
@@ -62,31 +63,28 @@
      </p>
 
      <em><h1 class="h1">Voces participantes</h1></em>
-
-          <% @voices.sort_by(&:created_at).reverse.each do |voice| %>
-   <div class="card" style="width: fill;">
-     <div class="card-body">
-       <h5 class="card-title">Nombre: <%= voice.name %></h5>
-       <h6 class="card-subtitle mb-2 text-muted">Email: <%= voice.email %></h6>
-
-       <h6 class="card-subtitle mb-2 text-muted">Estado: <%= voice.status.name %></h6>
-
-       <p class="card-text">
-              <% if voice.status_id == 2 %>
-              <a href=<%= voice.original_file%> download>Audio</a>
-              <%=audio_tag(voice.original_file, autoplay: false, controls: true)%>
-              <% end %>
-       </p>
+        <% @voices.sort_by(&:created_at).reverse.each do |voice| %>
+          <div class="card" style="width: fill;">
+            <div class="card-body">
+              <h5 class="card-title">Nombre: <%= voice.name %></h5>
+              <h6 class="card-subtitle mb-2 text-muted">Email: <%= voice.email %></h6>
+              <h6 class="card-subtitle mb-2 text-muted">Estado: <%= voice.status.name %></h6>
+              <p class="card-text">
+                <% if voice.status_id == 2 %>
+                  <a href=<%= "http://d2gnw0j9fh1sj8.cloudfront.net/public/assets/voices/"+voice.id.to_s+"/original/"+voice.original_file_file_name.to_s %> download>Audio</a>
+                  <%=audio_tag("http://d2gnw0j9fh1sj8.cloudfront.net/public/assets/voices/"+voice.id.to_s+"/convertido/"+voice.converted_file_file_name.to_s, autoplay: false, controls: true)%>
+                <% end %>
+              </p>
               <% if user_signed_in? %>
                 <%= link_to 'Show', voice %>
                 <%= link_to 'Edit', edit_voice_path(voice) %>
                 <%= link_to 'Destroy', voice, method: :delete, data: { confirm: '¿Estás seguro?' } %>
-               <% else %>
+              <% else %>
               <% end %>
-      </div>
-    </div> <br>
-
-              <% end %>
+            </div>
+          </div> 
+          <br>
+        <% end %>
     </div>
   </div>
 </div>

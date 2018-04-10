@@ -15,6 +15,7 @@ class ContestsController < ApplicationController
   # GET /contests/1.json
   def show
     system "rake test CONTEST_ID=#{params[:id]}"
+    @banner = "http://d2gnw0j9fh1sj8.cloudfront.net"+Contest.find_by(url: params[:url]).banner.url.split("vocesclouds3")[1]
     @voices = Voice.where(contest_id: Contest.find_by(url: params[:url]))
     .paginate(:page => params[:page], :per_page => 50)
   end
